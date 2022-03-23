@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>
+      Welcome {{session['user_name']}} <a href="/home">Dashboard</a>
+      <a href="/logout">Logout</a>
+    </h1>
+    <h1>{{instructions.name}}</h1>
+    <h3>Description : {{instructions.description}}</h3>
+    {%if instructions.under_30 == 1%}
+    <h3>Under 30 Minutes : Yes</h3>
+    {% endif %} {%if instructions.under_30 == 0%}
+    <h3>Under 30 Minutes : No</h3>
+    {% endif %}
+    <h3>Instructions : {{instructions.instruction}}</h3>
+    <h3>Date Made : {{instructions.made_on}}</h3>
+  </body>
+</html>
